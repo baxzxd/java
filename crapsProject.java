@@ -1,7 +1,9 @@
 //Project Name: Game of Craps
 //Date: 12/6/2018
 //Name: Adam Mason
-/*   Project Description   */
+/*   Project Description 
+   test
+   */
 import java.util.Scanner;
 import java.util.Random;
 public class crapsProject
