@@ -17,7 +17,6 @@ public class crapsProject
             char progRun = 'p';
             int diceSum, point, rollCounter, currentBet = 0;
             int playerBalance = 1000;
-       
         //Greet player and ask for name
             System.out.print("Welcome to Adam's casino! Please enter your name to get started:");
             String playerName = scan.nextLine();
@@ -35,7 +34,7 @@ public class crapsProject
                 //Set roll count to 1, get new diceSum and print
                     playerBalance -= currentBet;
                     rollCounter = 1;
-                    diceSum = rand.nextInt(12) + 1;
+                    diceSum = rand.nextInt(11) + 2;
                     System.out.print("Roll 1: " + playerName + " rolls a " + diceSum + ". ");
                 if ( diceSum == 2 || diceSum == 3 || diceSum == 12 )
                     System.out.println("You lost!");
@@ -54,7 +53,7 @@ public class crapsProject
                     {
                         //Set roll count and diceSum
                             rollCounter++;
-                            diceSum = rand.nextInt(12) + 1;
+                            diceSum = rand.nextInt(11) + 2;
                             System.out.print("\nRoll " + rollCounter + ": " + playerName + " rolls a " + diceSum + ". ");
                         //Check if player lost or got the point, and then break
                         if (diceSum == 7)
@@ -76,7 +75,6 @@ public class crapsProject
                 System.out.println("You're broke!");
                 break;
             }
-            //Ask user if they want to play again or quit and wait for input
             progRun = ' ';
             while(progRun != 'p' && progRun != 'q')
             {
